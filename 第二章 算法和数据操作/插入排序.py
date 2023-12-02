@@ -24,3 +24,17 @@ list=[100,6,5,8,33,7,10,1,12,3,4,4,15,1,2,3,2,5,8,10,100,89,23,55,11,0]
 
 print(insertsort(list))
 
+
+
+def insertionSort(a, n):
+    if n <= 1:
+        return
+    for i in range(1, n):
+        value = a[i]
+        for j in range(i-1, -1, -1):
+            if a[j] > value:
+                a[j+1] = a[j]  # 数据移动
+            else:
+                break
+        a[j+1] = value
+
