@@ -1,6 +1,11 @@
 
 
-k='sb'
+def test(a):
+    a+=1
+    if a<=10:
+        test(a)
+    else:
+        return False
 
-if type(k)!=int:
-    print('yes')
+b=test(100)
+print(b)
