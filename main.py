@@ -1,11 +1,5 @@
 
-
-def test(a):
-    a+=1
-    if a<=10:
-        test(a)
-    else:
-        return False
-
-b=test(100)
-print(b)
+root=1
+root1=0
+isLeaf=True if root and root1 ==1 else False
+print(isLeaf)

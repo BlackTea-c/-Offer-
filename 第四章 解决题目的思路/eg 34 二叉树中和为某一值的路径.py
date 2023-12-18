@@ -47,4 +47,34 @@ def inorder_traversal(node):
 #print("Inorder Traversal of the Binary Tree:")
 #inorder_traversal(binary_tree)
 
-root=binary_tree
+def findpath(root,expectedSum,path,currentSum):
+
+
+    currentSum+=root.value
+    path.append(root)
+    isLeaf=True if root.right==None and root.left ==None else False
+    if currentSum==expectedSum and isLeaf==True:
+        print('A path if found')
+        for node in path:
+            print(node.value,end=' ')
+        print('')
+
+    if root.left!=None:
+        findpath(root.left,expectedSum,path,currentSum)
+    if root.right!=None:
+        findpath(root.right,expectedSum,path,currentSum)
+    path.pop(-1)
+
+
+
+def Solution(root,expectedSum):
+
+    currentSum=0
+    path=[]
+    findpath(root,expectedSum,path,currentSum)
+
+
+root=Node(1)
+root.right=Node(2)
+
+Solution(root,3)
