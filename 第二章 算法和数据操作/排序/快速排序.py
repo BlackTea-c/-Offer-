@@ -47,14 +47,12 @@ def QuickSort(A, left, right):
     QuickSort(A, left, pivot_index - 1)
     QuickSort(A, pivot_index + 1, right)
 def main():
-    A = [5, 2, 9, 4, 7, 6, 1, 3, 8] # 从小到大快速排序
+    A = [5,4,6,1,3] # 从小到大快速排序
     n = len(A)
     QuickSort(A, 0, n - 1)
     print("快速排序结果：")
-    for i in range(n):
-        print("%d ", A[i])
-    print("\n")
-
+    print(A)
+main()
 
 
 
