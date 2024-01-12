@@ -38,3 +38,26 @@ def MorethanhalfNum(A,left,right):
 
 
 MorethanhalfNum(A,0,len(A)-1)
+
+
+#方案二
+#O(n)  因为这个数字是次数最多的，其它的都干不动它
+
+def MorethanhalfNum_method2(A):
+
+    number=A[0]
+    times=1
+    for num in A[1:]:
+        if number!=num:
+            times=times-1
+        else:
+            times=times+1
+        if times==0:
+            number=num
+
+
+
+    return number
+
+a=MorethanhalfNum_method2(A)
+print(a)
