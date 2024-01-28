@@ -8,7 +8,6 @@
 import heapq
 
 #尝试自己写一个？
-
 #最大堆吧！
 class MAXheap():
     def __init__(self):
@@ -122,6 +121,13 @@ insert_item=[0,0,0,0,0]
 insertAndfindmiddle(A,left_max_heap,right_min_heap,insert_item)
 
 A.extend(insert_item)
+
+
+
+
+
+
+
 import numpy as np
 
 np.array(A)
